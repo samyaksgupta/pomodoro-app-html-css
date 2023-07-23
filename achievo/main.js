@@ -6,7 +6,7 @@ const buttonTypeShortBreak = document.querySelector("#buttonTypeShortBreak");
 const audio = new Audio('alarm.mp3');
 
 const pomodoroTimerInSeconds = 1500; 
-const shortBreakTimerInSeconds = 100;
+const shortBreakTimerInSeconds = 300;
 const TIMER_TYPE_POMODORO = 'POMODORO';
 const TIMER_TYPE_SHORT_BREAK = 'SHORTBREAK';
 
@@ -75,3 +75,32 @@ const setPomodoroType = (type) =>{
 
     resetTimer();
 }
+
+const inputBox = document.getElementById("input-box");
+const ListContainer = document.getElementById("listto");
+function addTask(){
+    if(inputBox.value === ''){
+        alert("write something before adding!")
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        ListContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+
+    }
+    inputBox.value = '';
+}
+
+ListContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+    }
+    
+    else if(e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+    }
+
+}, false);
