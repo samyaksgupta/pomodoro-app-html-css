@@ -244,6 +244,7 @@ body{
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+  width: 400px;
 }
 input{
   flex: 1;
