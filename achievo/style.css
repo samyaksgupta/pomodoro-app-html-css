@@ -354,4 +354,7 @@ ul li span:hover{
     padding-right: 75px;
     
   }
+  .sideber {
+    display: none;
+  }
 }
