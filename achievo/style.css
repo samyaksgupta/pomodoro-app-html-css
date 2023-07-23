@@ -321,9 +321,7 @@ ul li span:hover{
   color: #fff;
 }
 
-/* Existing CSS styles */
 
-/* Add media query for screens with a maximum width of 700px */
 @media screen and (max-width: 700px) {
   body {
     padding-left: 10px;
