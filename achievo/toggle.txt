@@ -1,0 +1,70 @@
+adding a radio button
+<div class="right">
+                <div class="spacebt">
+                    <div class="radio-btn">
+                        <div class="radio-inner"></div>
+                      
+                    </div>
+                </div>
+
+css file
+body.dark {
+  background-color: #030205;
+}
+
+
+.radio-btn {
+  width: 20px;
+  height: 6px;
+  padding: 9px;
+  padding-top: 6px;
+  padding-left: 6px;
+  background-color: #27173a;
+  border-radius: 50px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio-btn .radio-inner {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  background-color: #8154b8;
+  border-radius: 50%;
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 100%;
+  height: 100%;
+  background-color: #27173a;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 0.6s;
+}
+
+.radio-btn .radio-inner.active {
+  transform: translateX(calc(150px - 137px));
+}
+
+.radio-btn .radio-inner.active::before {
+  left: -25px;
+  transform: scale(1);
+}
+
+js file
+$(document).ready(function () {
+    $(".radio-btn").click(function () {
+      $(".radio-inner").toggleClass("active");
+      $("body").toggleClass("dark");
+      
+
+    });
+  });
+
+
+
