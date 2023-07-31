@@ -9,10 +9,10 @@
         <!-- Font Roboto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
-            rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     
         <link rel="stylesheet" href="style.css">
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel="stylesheet">
         <style>
             
         </style>
@@ -20,13 +20,10 @@
     </head>
     <body style="height: 800px;
     padding-left: 90px;">
-    <div>
-        
-    </div>
+
         <div class="header">
             <div class="left">
-                <img class="hamburger-menu"
-                src="icons/hamburger-menu.svg">
+                
                 
             </div>
             <div class="middle">
@@ -34,17 +31,104 @@
                 src="achievo.png">
             </div>
             <div class="right">
+                <div class="spacebt">
+                    <div class="radio-btn" id="radio">
+                        <div class="radio-inner"></div>
+                      
+                    </div>
+                </div>
+                
                 <img class="search" src="icons/search.svg">
                 <img class="noti" src="icons/notifications.svg">
                 
                 <img class="apps" src="icons/youtube-apps.svg">
                 
-                <img class="userpp" src="icons/userpp.jpeg">
+                <img src = "icons/userpp.jpeg" class = "userpp" onclick="toggleMenu()">
             </div>
+            
         
         
         </div>
-        <div class="sideber">siderbar11</div>
+
+        <div class="sub-menu-wrap" id = "subMenu">
+            <div class="sub-menu">
+                <div class="user-info">
+                    <img src="icons/userpp.jpeg" >
+                    <h3>Khyati Satija</h3>
+                </div>
+                <hr/>
+                <a href = "#" class = "sub-menu-link">
+                    <i class='bx bx-user'></i>
+                    <p>My Profile</p> <span>></span>
+                </a>
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-star'></i>
+                    <p>About Us</p> <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-question-mark'></i>
+                    <p>Support</p> <span>></span>
+                </a>
+
+                <a href="#" class="sub-menu-link">
+                    <i class='bx bx-log-out'></i>
+                    <p>Log out</p> <span>></span>
+                </a>
+
+                
+
+            </div>
+        </div>
+
+        <!-- adding new file for sidebar -->
+        <div class="nav" id="nav">
+            <nav class="nav__content">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right' ></i>
+                </div>
+    
+                <a href="#" class="nav__logo">
+                    <i class='bx bx-menu' ></i>
+                    <span class="nav__logo-name">Features</span>
+                </a>
+    
+                <div class="nav__list">
+                    <a href="#" class="nav__link active-link">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="nav__name">Eisenhower Matrix</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-webcam'></i>
+                        <span class="nav__name">Motivational wheel</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-file' ></i>
+                        <span class="nav__name">Analyse your day</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-bar-chart-square' ></i>
+                        <span class="nav__name">Leaderboard</span>
+                    </a>
+    
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-alarm' ></i>
+                        <span class="nav__name">Pomodoro-ToDo</span>
+                    </a>
+                    <a href="#" class="nav__link">
+                        <i class='bx bx-flag'></i>
+                        <span class="nav__name">Milestone Setter</span>
+                    </a>
+
+                </div>
+            </nav>
+        </div>
+
+
+
         <div style="
         height: 200px;
         width: 200px;
@@ -75,7 +159,7 @@
                     </div>
         
                     <div class="card-body">
-        
+                        <!-- in this div i also want to add buttons which can configure time of the progress value,increase  -->
                         <div id="circularProgressBar" class="progress-bar">
                             <div class="progress-bar-inner">
                                 <h2 class="progress-value">25:00</h2>
@@ -113,7 +197,14 @@
             </div>
 
         </div>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            let subMenu = document.getElementById("subMenu");
+        
+            function toggleMenu(){
+                subMenu.classList.toggle("open-menu");
+            }
+        </script>
         
 
         
